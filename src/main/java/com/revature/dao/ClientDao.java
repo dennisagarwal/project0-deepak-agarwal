@@ -7,6 +7,7 @@
     import java.sql.PreparedStatement;
     import java.sql.ResultSet;
     import java.sql.SQLException;
+    import java.util.ArrayList;
     import java.util.List;
 
     //TODO 6: Create a Dao (data access object) for a particular 'entity'
@@ -51,16 +52,46 @@
         return null;
     }
 
-    public List<Client> getAllClients() {
-        return null;
+    public List<Client> getAllClients() throws SQLException {
+//Declare a array list of students, this going to be a array list that we return back
+        List<Client> clients = new ArrayList<>();
+        //we need to have some kind of block that we to automatically close whenever the block is done
+        try (Connection con = ConnectionUtility.getConnection()) {// try with resources
+            String sql = "SELECT * FROM students";
+            PreparedStatement pstm = con.prepareStatement(sql);
+//here pstm is executng query, it is used with select
+            ResultSet rs = pstm.executeQuery();
+
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String firstName = rs.getString("first_name");
+                String lastName = rs.getString("last_name");
+                int age = rs.getInt("age");
+
+                //adding client object to the client list
+                clients.add(new Client(id, firstName, lastName, age));
+            }
+        }
+        return clients;
     }
+
     //U
         public Client updateClient(Client client){
            return null;
 }
 
 //D
-    public void deleteClientById(int id){
+        //true if a record was deleted, false if a record was not deleted
+    public boolean deleteClientById(int id) throws SQLException {
+    try(Connection con = ConnectionUtility.getConnection()){
+        String sql = "DELETE FROM students WHERE id= ?";
+        PreparedStatement pstm = con.prepareStatement(sql);
+        int numberOfRecordsDeleted = pstm.executeUpdate(); //executeUpdate() is used with Insert, Update, Delete
 
+        if(numberOfRecordsDeleted ==1){
+          return true;
+        }
+    }
+    return false;
     }
     }
