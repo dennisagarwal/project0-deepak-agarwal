@@ -12,10 +12,14 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    // https://mvnrepository.com/artifact/org.postgresql/postgresql
 
     // TODO 1 : include the postgres driver dependency in build.gradle
         implementation 'org.postgresql:postgresql:42.3.3'
+    implementation 'io.javalin:javalin:4.3.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.2'
+    //jackson is for converting the java object to json
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+//if it is test implimentation then we will be only using it inside test , not in other folders
 
 }
 
