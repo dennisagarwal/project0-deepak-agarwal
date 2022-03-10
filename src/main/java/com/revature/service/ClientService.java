@@ -16,4 +16,15 @@ public class ClientService {
     public List<Client> getAllClients() throws SQLException {
         return this.clientDao.getAllClients();
     }
+
+    public Client getClientById(String id) throws SQLException {
+        int clientId = Integer.parseInt(id); //this could throw an unchecked exception
+        //known as NumberFormatException
+        //important to note because any unhandled exceptions will result in a 500 Internal Server Error
+        //(which we should try to avoid)
+
+        Client c = clientDao.getClientById(clientId); //this could return null
+
+        return c;
+    }
 }
