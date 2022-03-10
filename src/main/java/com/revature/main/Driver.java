@@ -1,13 +1,8 @@
 package com.revature.main;
 
+import com.revature.controller.HelloWorldController;
 import com.revature.controller.Controller;
-import com.revature.dao.ClientDao;
-import com.revature.model.Client;
-import com.revature.utility.ConnectionUtility;
 import io.javalin.Javalin;
-
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class Driver {
 
@@ -16,16 +11,18 @@ public class Driver {
         //this willl give us the Javalin object
         //the javalin object is the server
         Javalin app = Javalin.create();
+//calling the constructor here for creating the new Client Controller object to be created
+        //passing the object in line 28
+        mapControllers(app, new HelloWorldController());
 
-        mapControllers(app);
-
-        app.start(); //port 8080 by default
+        app.start(8081); //port 8080 by default
     }
 //we create controller interface
 
     public static void mapControllers(Javalin app, Controller... controllers ) {
         //loop through each of the controller and called map endpoint on them
        for(Controller c : controllers){
+           //call map points on controller and passing in the server object as app to controller
            c.mapEndpoints(app);
     }
 
