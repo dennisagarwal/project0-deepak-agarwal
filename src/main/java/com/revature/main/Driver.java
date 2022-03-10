@@ -1,5 +1,6 @@
 package com.revature.main;
 
+import com.revature.controller.ClientController;
 import com.revature.controller.HelloWorldController;
 import com.revature.controller.Controller;
 import io.javalin.Javalin;
@@ -13,7 +14,7 @@ public class Driver {
         Javalin app = Javalin.create();
 //calling the constructor here for creating the new Client Controller object to be created
         //passing the object in line 28
-        mapControllers(app, new HelloWorldController());
+        mapControllers(app, new HelloWorldController(), new ClientController());
 
         app.start(8081); //port 8080 by default
     }
