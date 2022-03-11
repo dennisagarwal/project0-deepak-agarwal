@@ -20,6 +20,7 @@ dependencies {
     //jackson is for converting the java object to json
     implementation 'ch.qos.logback:logback-classic:1.2.11'
 //if it is test implimentation then we will be only using it inside test , not in other folders
+    testImplementation 'org.mockito:mockito-core:4.4.0'
 
 }
 

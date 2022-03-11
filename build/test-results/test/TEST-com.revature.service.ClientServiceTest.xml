@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.revature.service.ClientServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-11T02:24:41" hostname="LAPTOP-6318QO8H" time="0.496">
+  <properties/>
+  <testcase name="test_getStudentById_sqlExceptionFromDao()" classname="com.revature.service.ClientServiceTest" time="0.496"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

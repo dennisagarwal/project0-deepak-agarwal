@@ -15,6 +15,10 @@ public class ClientService {
         this.clientDao = new ClientDao();
     }
 
+    public ClientService(ClientDao mockDao){
+        this.clientDao = mockDao;
+    }
+
     public List<Client> getAllClients() throws SQLException {
         return this.clientDao.getAllClients();
     }
