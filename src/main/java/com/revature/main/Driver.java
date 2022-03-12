@@ -4,9 +4,16 @@ import com.revature.controller.ClientController;
 import com.revature.controller.ExceptionController;
 import com.revature.controller.HelloWorldController;
 import com.revature.controller.Controller;
+import com.revature.dao.AccountDao;
+import com.revature.dao.ClientAccountDao;
+import com.revature.model.Account;
+import com.revature.model.ClientAccount;
 import io.javalin.Javalin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.SQLException;
+import java.util.List;
 
 
 public class Driver {
@@ -14,6 +21,27 @@ public class Driver {
     public static Logger logger = LoggerFactory.getLogger(Driver.class);
 
     public static void main(String[] args) {
+
+        ClientAccountDao clientAccountDao = new ClientAccountDao();
+        try {
+            List<ClientAccount> clientAccounts = clientAccountDao.getAllClientAccounts();
+
+            for(ClientAccount ca : clientAccounts){
+                System.out.println(ca);
+            }
+            System.out.println(clientAccounts);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+//        AccountDao accountDao = new AccountDao();
+//        try {
+//            List<Account> accounts = accountDao.getAllAccounts();
+//            System.out.println(accounts);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
         //ClientDao clientDao = new ClientDao();
         //this willl give us the Javalin object
         //the javalin object is the server

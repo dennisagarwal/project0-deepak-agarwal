@@ -60,6 +60,14 @@ public class ClientController implements Controller {
         ctx.json(editedClient);
     };
 
+    private Handler deleteClientById = (ctx) -> {
+        String id = ctx.pathParam("clientId");
+        boolean client = clientService.deleteClientById(id);
+
+        ctx.json(client);
+
+    };
+
     @Override
     public void mapEndpoints(Javalin app) {
         app.get("/clients", getAllClients);
@@ -68,5 +76,6 @@ public class ClientController implements Controller {
         app.get("/clients/{clientId}", getClientById);
         app.post("/clients", addClient);
         app.put("/clients/{clientId}", editClient);
+        app.delete("/clients/{clientId}", deleteClientById);
     }
 }

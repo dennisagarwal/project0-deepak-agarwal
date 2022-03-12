@@ -44,7 +44,6 @@ public class ClientService {
             //illegal argument exception is a part of Java library
             throw new IllegalArgumentException("Id provided for client must be a valid int");
         }
-
     }
 
     public Client addClient(Client c) throws SQLException {
@@ -72,6 +71,27 @@ public class ClientService {
             throw new IllegalArgumentException("Id provide for client must be a valid int");
         }
     }
+       //If we are deleting a client, we must check if the client exists or not.
+        public boolean deleteClientById(String id) throws SQLException, ClientNotFoundException {
+        try {
+        int clientId = Integer.parseInt(id); //this could throw an unchecked exception
+        //known as NumberFormatException
+        //important to note because any unhandled exceptions will result in a 500 Internal Server Error
+        //(which we should try to avoid)
+
+       boolean c = clientDao.deleteClientById(clientId); //this could return null
+            if (c == false) {
+                throw new ClientNotFoundException("Client with id " + clientId + " was not found");
+            }
+            return true;
+
+    } catch (NumberFormatException e) {
+        //illegal argument exception is a part of Java library
+        throw new IllegalArgumentException("Id provided for client must be a valid int");
+    }
+
+}
+
     public void validateClientInformation(Client c){
         c.setFirstName(c.getFirstName().trim());
         c.setLastName(c.getLastName().trim());

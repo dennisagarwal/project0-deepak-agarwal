@@ -232,3 +232,146 @@
 11 03 2022 - 20:19:56.624 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
 11 03 2022 - 20:19:57.161 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 11 03 2022 - 20:19:57.162 [main] INFO  io.javalin.Javalin - Javalin started in 570ms \o/
+11 03 2022 - 22:26:57.878 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+11 03 2022 - 22:26:57.954 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @663ms to org.eclipse.jetty.util.log.Slf4jLog
+11 03 2022 - 22:26:57.961 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+11 03 2022 - 22:26:57.989 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+11 03 2022 - 22:26:58.648 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+11 03 2022 - 22:26:58.648 [main] INFO  io.javalin.Javalin - Javalin started in 693ms \o/
+11 03 2022 - 22:27:04.606 [JettyServerThreadPool-15] INFO  com.revature.main.Driver - DELETErequest received for/clients/5
+11 03 2022 - 22:30:00.323 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - DELETErequest received for/clients/100
+11 03 2022 - 22:30:00.374 [JettyServerThreadPool-16] WARN  c.r.controller.ExceptionController - User attempted to retrieve a student that was not found. Exception message is Client with id 100 was not found
+12 03 2022 - 10:21:21.193 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 10:21:21.250 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @6488ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 10:21:21.251 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 10:21:21.382 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 10:21:22.109 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 10:21:22.110 [main] INFO  io.javalin.Javalin - Javalin started in 859ms \o/
+12 03 2022 - 13:14:30.147 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:14:30.160 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1468ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:14:30.161 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:14:30.182 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:14:30.390 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:14:30.390 [main] INFO  io.javalin.Javalin - Javalin started in 230ms \o/
+12 03 2022 - 13:18:24.887 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:18:24.897 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1403ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:18:24.898 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:18:24.918 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:18:25.104 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:18:25.104 [main] INFO  io.javalin.Javalin - Javalin started in 206ms \o/
+12 03 2022 - 13:19:21.304 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:19:21.315 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1442ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:19:21.316 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:19:21.336 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:19:21.521 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:19:21.521 [main] INFO  io.javalin.Javalin - Javalin started in 206ms \o/
+12 03 2022 - 13:20:40.140 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:20:40.151 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1354ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:20:40.152 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:20:40.171 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:20:40.350 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:20:40.350 [main] INFO  io.javalin.Javalin - Javalin started in 198ms \o/
+12 03 2022 - 13:27:32.460 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:27:32.471 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1312ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:27:32.473 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:27:32.492 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:27:32.669 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:27:32.670 [main] INFO  io.javalin.Javalin - Javalin started in 198ms \o/
+12 03 2022 - 13:57:59.872 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:57:59.883 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1322ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:57:59.884 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:57:59.903 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:58:00.085 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:58:00.086 [main] INFO  io.javalin.Javalin - Javalin started in 203ms \o/
+12 03 2022 - 13:59:42.102 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 13:59:42.112 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1307ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 13:59:42.114 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 13:59:42.135 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 13:59:42.313 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 13:59:42.313 [main] INFO  io.javalin.Javalin - Javalin started in 200ms \o/
+12 03 2022 - 15:15:22.931 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+12 03 2022 - 15:15:22.941 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1460ms to org.eclipse.jetty.util.log.Slf4jLog
+12 03 2022 - 15:15:22.944 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+12 03 2022 - 15:15:22.964 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+12 03 2022 - 15:15:23.142 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+12 03 2022 - 15:15:23.142 [main] INFO  io.javalin.Javalin - Javalin started in 199ms \o/
