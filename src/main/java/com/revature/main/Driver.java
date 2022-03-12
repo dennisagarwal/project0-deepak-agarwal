@@ -7,6 +7,7 @@ import com.revature.controller.Controller;
 import com.revature.dao.AccountDao;
 import com.revature.dao.ClientAccountDao;
 import com.revature.model.Account;
+import com.revature.model.Client;
 import com.revature.model.ClientAccount;
 import io.javalin.Javalin;
 import org.slf4j.Logger;
@@ -26,10 +27,17 @@ public class Driver {
         try {
             List<ClientAccount> clientAccounts = clientAccountDao.getAllClientAccounts();
 
-            for(ClientAccount ca : clientAccounts){
-                System.out.println(ca);
-            }
-            System.out.println(clientAccounts);
+//            for(ClientAccount ca : clientAccounts){
+//                System.out.println(ca);
+//            }
+//            System.out.println(clientAccounts);
+            ClientAccount ca1 = clientAccountDao.getAccountByClientId(10);
+            System.out.println("ca1 " + ca1);
+
+//            ClientAccount ca2 = clientAccountDao.getAccountByClientId(10);
+//            System.out.println("ca2 " + ca2);
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
