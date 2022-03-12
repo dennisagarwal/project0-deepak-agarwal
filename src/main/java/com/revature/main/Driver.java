@@ -5,16 +5,24 @@ import com.revature.controller.ExceptionController;
 import com.revature.controller.HelloWorldController;
 import com.revature.controller.Controller;
 import io.javalin.Javalin;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class Driver {
 
-    
+    public static Logger logger = LoggerFactory.getLogger(Driver.class);
 
     public static void main(String[] args) {
-        //        ClientDao clientDao = new ClientDao();
+        //ClientDao clientDao = new ClientDao();
         //this willl give us the Javalin object
         //the javalin object is the server
         Javalin app = Javalin.create();
+
+        //this will execute before every single request
+        app.before((ctx) -> {
+            logger.info(ctx.method() + "request received for" + ctx.path());
+        });
 //calling the constructor here for creating the new Client Controller object to be created
         //passing the object in line 28
         mapControllers(app, new HelloWorldController(), new ClientController(), new ExceptionController());

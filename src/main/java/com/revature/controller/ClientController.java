@@ -44,11 +44,29 @@ public class ClientController implements Controller {
 // extending a runtime exception is unchecked exception
     //create checked exception by extending exception
 
+    private Handler addClient = (ctx)->{
+        Client clientToAdd = ctx.bodyAsClass(Client.class);
+
+        Client c = clientService.addClient(clientToAdd);
+        ctx.status(201); // 201 Created
+        ctx.json(c);
+        //System.out.println(clientToAdd);
+    };
+
+    private Handler editClient = (ctx) -> {
+        Client clientToEdit = ctx.bodyAsClass(Client.class);
+        Client editedClient = clientService.editClient(ctx.pathParam("clientId"),clientToEdit);
+        ctx.status(200);
+        ctx.json(editedClient);
+    };
+
     @Override
     public void mapEndpoints(Javalin app) {
         app.get("/clients", getAllClients);
         //{clientId} is a pat variable
         //if error 404 not check the end points
         app.get("/clients/{clientId}", getClientById);
+        app.post("/clients", addClient);
+        app.put("/clients/{clientId}", editClient);
     }
 }
