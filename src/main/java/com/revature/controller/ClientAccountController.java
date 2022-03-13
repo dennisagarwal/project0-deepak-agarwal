@@ -7,6 +7,8 @@ import com.revature.service.ClientAccountService;
 import io.javalin.Javalin;
 import io.javalin.http.Handler;
 
+import java.util.List;
+
 public class ClientAccountController implements Controller {
 
     private ClientAccountService clientAccountService;
@@ -14,6 +16,24 @@ public class ClientAccountController implements Controller {
     public ClientAccountController(){
         this.clientAccountService = new ClientAccountService();
     }
+
+//    private Handler getAllClientAccounts = (ctx) -> {
+//        List<ClientAccount> clients = clientAccountService.getAllClientAccounts();
+//        //calling the clients
+//        ctx.json(clients);
+//    };
+
+    private Handler getAccountByClientIdAccountId = (ctx) -> {
+        String id1 = ctx.pathParam("clientId");
+        String id2 = ctx.pathParam("accountId");
+        try{
+            ClientAccount clientAccount = clientAccountService.getAccountByClientIdAccountId(id1,id2);
+            ctx.json(clientAccount);
+        } catch(ClientAccountNotFoundException e){
+            ctx.status(404);
+            ctx.json(e.getMessage());
+        }
+    };
 
     private Handler getAccountByClientId = (ctx) -> {
         String id = ctx.pathParam("clientIdInParam");
@@ -47,53 +67,19 @@ public class ClientAccountController implements Controller {
 
     private Handler deleteClientAccountById = (ctx) -> {
         String id = ctx.pathParam("accountIdInParam");
-        boolean client = clientAccountService.deleteAccountOfClient(id);
+        boolean clientAccount = clientAccountService.deleteAccountOfClient(id);
 
-        ctx.json(client);
+        ctx.json(clientAccount);
 
     };
-//       System.out.println(clientAccountToAdd);
-//        ClientAccount ca = clientAccountService.addClientAccount(clientAccountToAdd);
-//        ctx.status(201);
-//        ctx.json(ca);
 
-
-        //        try {
-
-        //as we are handling all the exception from exception controller
-//        }
-//        catch (ClientNotFoundException e) {
-//            ctx.status(404); //404 not found status code
-//            ctx.json(e.getMessage()); //send back the custom exception message
-//        }
-//        catch (IllegalArgumentException e) {
-//            ctx.status(400);
-//            ctx.json(e.getMessage());
-//        }
-
-
-//
-//    private Handler postTests = (ctx) -> {
-//        ctx.html("<h1>post/tests<h1>");
-//    };
-//
-//    private Handler putTests = (ctx) -> {
-//        ctx.html("<h1>put/tests<h1>");
-//    };
-//
-//    private Handler patchTests= (ctx) -> {
-//        ctx.html("<h1>patch/tests<h1>");
-//    };
-//    private Handler deleteTests = (ctx) -> {
-//        ctx.html("<h1>delete/tests<h1>");
-//    };
 
     @Override
     public void mapEndpoints(Javalin app) {
         app.get("/clients/{clientIdInParam}/accounts", getAccountByClientId);
+        app.get("/clients/{clientId}/accounts/{accountId}", getAccountByClientIdAccountId);
         app.post("/clients/{clientIdInParam}/accounts", addClientAccount);
         app.put("/clients/{clientIdInParam}/accounts/{accountIdInParam}", editClientAccount);
-//        app.patch("/tests", patchTests);
         app.delete("/clients/{clientIdInParam}/accounts/{accountIdInParam}", deleteClientAccountById);
     }
 }

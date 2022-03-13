@@ -4,9 +4,11 @@ import com.revature.dao.ClientAccountDao;
 import com.revature.dao.ClientDao;
 import com.revature.exception.ClientAccountNotFoundException;
 import com.revature.exception.ClientNotFoundException;
+import com.revature.model.Client;
 import com.revature.model.ClientAccount;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class ClientAccountService {
 
@@ -77,4 +79,18 @@ public class ClientAccountService {
 
     }
 
+//    public List<ClientAccount> getAllClientAccounts() throws SQLException {
+//        return this.clientAccountDao.getAllClientAccounts();
+//    }
+
+    public ClientAccount getAccountByClientIdAccountId(String id1, String id2) throws SQLException, ClientAccountNotFoundException {
+        int clientId = Integer.parseInt(id1);
+        int accountId = Integer.parseInt(id2);
+
+       ClientAccount ca = clientAccountDao.getAccountByClientIdAccountId(clientId,accountId);
+        if(ca == null){
+            throw new ClientAccountNotFoundException("Client Id " + clientId + " or Account Id " + accountId + " not found ");
+        }
+       return ca;
+    }
 }

@@ -20,20 +20,9 @@ public class ClientController implements Controller {
     };
     private Handler getClientById = (ctx) -> {
         String id = ctx.pathParam("clientId");
-//        try {
         Client client = clientService.getClientById(id);
 
         ctx.json(client);
-        //as we are handling all the exception from exception controller
-//        }
-//        catch (ClientNotFoundException e) {
-//            ctx.status(404); //404 not found status code
-//            ctx.json(e.getMessage()); //send back the custom exception message
-//        }
-//        catch (IllegalArgumentException e) {
-//            ctx.status(400);
-//            ctx.json(e.getMessage());
-//        }
 
     };
 
