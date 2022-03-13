@@ -1915,3 +1915,169 @@
 13 03 2022 - 01:00:47.806 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
 13 03 2022 - 01:00:48.058 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 13 03 2022 - 01:00:48.058 [main] INFO  io.javalin.Javalin - Javalin started in 275ms \o/
+13 03 2022 - 09:43:17.832 [Thread-1] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:43:17.925 [Thread-1] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:43:17.926 [Thread-1] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:43:17.927 [Thread-1] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:43:33.322 [Thread-1] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:43:33.325 [Thread-1] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:43:33.326 [Thread-1] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:43:33.326 [Thread-1] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:46:54.582 [Thread-1] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:46:54.591 [Thread-1] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:46:54.592 [Thread-1] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:46:54.592 [Thread-1] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:47:13.026 [Thread-1] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:47:13.035 [Thread-1] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:47:13.036 [Thread-1] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:47:13.037 [Thread-1] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:47:59.512 [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:47:59.514 [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:47:59.514 [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:47:59.514 [Thread-0] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:48:49.338 [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:48:49.342 [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:48:49.343 [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:48:49.343 [Thread-0] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:49:10.952 [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:49:10.954 [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:49:10.955 [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:49:10.955 [Thread-0] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:49:56.725 [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+13 03 2022 - 09:49:56.728 [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+13 03 2022 - 09:49:56.728 [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#server-setup
+13 03 2022 - 09:49:56.728 [Thread-0] INFO  io.javalin.Javalin - To disable this message, do `JettyUtil.logIfNotStarted = false`
+13 03 2022 - 09:51:22.036 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 09:51:22.049 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @557ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 09:51:22.054 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 09:51:22.080 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 09:51:25.615 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 09:51:25.616 [main] INFO  io.javalin.Javalin - Javalin started in 3566ms \o/
+13 03 2022 - 09:51:28.823 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - GETrequest received for/test
+13 03 2022 - 09:51:36.043 [JettyServerThreadPool-11] INFO  com.revature.main.Driver - GETrequest received for/tests
+13 03 2022 - 09:51:40.430 [JettyServerThreadPool-11] INFO  com.revature.main.Driver - POSTrequest received for/tests
+13 03 2022 - 09:51:44.445 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - PUTrequest received for/tests
+13 03 2022 - 09:51:47.327 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - PATCHrequest received for/tests
+13 03 2022 - 09:51:50.829 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - DELETErequest received for/tests
+13 03 2022 - 09:53:54.723 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 09:53:54.745 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @914ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 09:53:54.751 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 09:53:54.785 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 09:53:55.430 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 09:53:55.430 [main] INFO  io.javalin.Javalin - Javalin started in 684ms \o/
+13 03 2022 - 09:54:01.928 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - COPYrequest received for/tests
+13 03 2022 - 10:48:14.243 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 10:48:14.260 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @812ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 10:48:14.265 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 10:48:14.292 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 10:48:14.890 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 10:48:14.891 [main] INFO  io.javalin.Javalin - Javalin started in 630ms \o/
+13 03 2022 - 10:48:24.910 [JettyServerThreadPool-15] INFO  com.revature.main.Driver - COPYrequest received for/clients/10/accounts
+13 03 2022 - 10:48:32.031 [JettyServerThreadPool-11] INFO  com.revature.main.Driver - COPYrequest received for/clients/11/accounts
+13 03 2022 - 10:48:38.629 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - COPYrequest received for/clients/12/accounts
+13 03 2022 - 10:48:44.044 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - GETrequest received for/clients/12/accounts
+13 03 2022 - 10:49:00.335 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - GETrequest received for/clients/11/accounts
+13 03 2022 - 10:49:10.702 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - GETrequest received for/clients/10/accounts
+13 03 2022 - 10:49:16.589 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - GETrequest received for/clients/13/accounts
+13 03 2022 - 11:17:27.991 [JettyServerThreadPool-16] INFO  com.revature.main.Driver - GETrequest received for/clients/12/accounts
+13 03 2022 - 11:17:58.600 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - GETrequest received for/clients/1200/accounts
+13 03 2022 - 11:17:58.737 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
+java.lang.NullPointerException: Parameter specified as non-null is null: method io.javalin.http.Context.json, parameter obj
+	at io.javalin.http.Context.json(Context.kt)
+	at com.revature.controller.ClientAccountController.lambda$new$0(ClientAccountController.java:21)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
+	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:44)
+	at io.javalin.http.JavalinServlet$service$tryBeforeAndEndpointHandlers$1.invoke(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service$tryWithExceptionMapper(JavalinServlet.kt:131)
+	at io.javalin.http.JavalinServlet.service$tryBeforeAndEndpointHandlers(JavalinServlet.kt:39)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:87)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:52)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:400)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:645)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:392)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:750)
+13 03 2022 - 11:26:52.007 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 11:26:52.024 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @645ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 11:26:52.026 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 11:26:52.054 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 11:26:52.527 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 11:26:52.527 [main] INFO  io.javalin.Javalin - Javalin started in 502ms \o/
+13 03 2022 - 11:27:02.197 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - GETrequest received for/clients/1200/accounts
+13 03 2022 - 11:27:16.665 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 11:27:16.680 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @546ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 11:27:16.685 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 11:27:16.711 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 11:27:17.155 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 11:27:17.155 [main] INFO  io.javalin.Javalin - Javalin started in 474ms \o/
+13 03 2022 - 11:27:21.984 [JettyServerThreadPool-14] INFO  com.revature.main.Driver - GETrequest received for/clients/1200/accounts
+13 03 2022 - 11:27:57.414 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - GETrequest received for/clients/12/accounts
+13 03 2022 - 11:28:57.209 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - GETrequest received for/clients/1200/accounts

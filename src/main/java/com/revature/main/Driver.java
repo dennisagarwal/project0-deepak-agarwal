@@ -1,9 +1,6 @@
 package com.revature.main;
 
-import com.revature.controller.ClientController;
-import com.revature.controller.ExceptionController;
-import com.revature.controller.HelloWorldController;
-import com.revature.controller.Controller;
+import com.revature.controller.*;
 import com.revature.dao.AccountDao;
 import com.revature.dao.ClientAccountDao;
 import com.revature.model.Account;
@@ -20,21 +17,16 @@ import java.util.List;
 public class Driver {
 
     public static Logger logger = LoggerFactory.getLogger(Driver.class);
-
     public static void main(String[] args) {
-
-        ClientAccountDao clientAccountDao = new ClientAccountDao();
-        try {
+//        ClientAccountDao clientAccountDao = new ClientAccountDao();
+//        try {
 //            List<ClientAccount> clientAccounts = clientAccountDao.getAllClientAccounts();
 //            System.out.println(clientAccountDao.getAccountByClientId(10));
 //            System.out.println(clientAccountDao.getAllClientAccounts());
 //              clientAccountDao.deleteAccountOfClient(100);
 //            System.out.println(clientAccountDao.deleteAccountOfClient(100));
-//            ClientAccount ca = new ClientAccount(50,"saving",1020,13,90000,13);
-//            System.out.println(clientAccountDao.updateClientAccount(ca));
-
-            clientAccountDao.getAccountByClientIdAccountId(13,50);
-            System.out.println(clientAccountDao.getAccountByClientIdAccountId(13,50));
+//            clientAccountDao.getAccountByClientIdAccountId(13,50);
+//            System.out.println(clientAccountDao.getAccountByClientIdAccountId(13,50));
 //            ClientAccount ca = new ClientAccount(0,"saving",8484,11,92340);
 //            System.out.println(clientAccountDao.addClientAccount(ca));
 //            System.out.println(clientAccountDao.getAllClientAccounts());
@@ -42,20 +34,15 @@ public class Driver {
 //                System.out.println(ca);
 //            }
 //            System.out.println(clientAccounts);
-
 //            ClientAccount ca1 = clientAccountDao.getAccountByClientId(10);
 //            System.out.println("ca1 " + ca1);
-
 //            ClientAccount ca2 = clientAccountDao.getAccountByClientId(10);
 //            System.out.println("ca2 " + ca2);
-
-
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+//            ClientAccount ca = new ClientAccount(50,"saving",1020,13,90000,13);
+//            System.out.println(clientAccountDao.updateClientAccount(ca));
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 //        AccountDao accountDao = new AccountDao();
 //        try {
 //            List<Account> accounts = accountDao.getAllAccounts();
@@ -75,7 +62,7 @@ public class Driver {
         });
 //calling the constructor here for creating the new Client Controller object to be created
         //passing the object in line 28
-        mapControllers(app, new HelloWorldController(), new ClientController(), new ExceptionController());
+        mapControllers(app, new HelloWorldController(), new ClientController(), new ExceptionController(),new ClientAccountController());
 
         app.start(8081); //port 8080 by default
     }
