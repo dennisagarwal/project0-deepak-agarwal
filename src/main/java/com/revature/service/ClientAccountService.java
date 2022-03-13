@@ -3,6 +3,7 @@ package com.revature.service;
 import com.revature.dao.ClientAccountDao;
 import com.revature.dao.ClientDao;
 import com.revature.exception.ClientAccountNotFoundException;
+import com.revature.exception.ClientNotFoundException;
 import com.revature.model.ClientAccount;
 
 import java.sql.SQLException;
@@ -54,6 +55,26 @@ public class ClientAccountService {
         } catch(NumberFormatException e){
             throw new IllegalArgumentException("Client provide must be a valid int");
         }
+    }
+
+    public boolean deleteAccountOfClient(String id) throws SQLException, ClientNotFoundException {
+        try {
+            int accountIdInParam = Integer.parseInt(id); //this could throw an unchecked exception
+            //known as NumberFormatException
+            //important to note because any unhandled exceptions will result in a 500 Internal Server Error
+            //(which we should try to avoid)
+
+            boolean ca = clientAccountDao.deleteAccountOfClient(accountIdInParam); //this could return null
+            if (ca == false) {
+                throw new ClientNotFoundException("Account with id " + accountIdInParam + " was not found");
+            }
+            return true;
+
+        } catch (NumberFormatException e) {
+            //illegal argument exception is a part of Java library
+            throw new IllegalArgumentException("Id provided for account must be a valid int");
+        }
+
     }
 
 }

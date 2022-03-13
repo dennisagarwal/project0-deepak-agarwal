@@ -3154,3 +3154,54 @@ com.revature.exception.ClientAccountNotFoundException: user is trying to edit cl
 13 03 2022 - 14:17:13.270 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 13 03 2022 - 14:17:13.270 [main] INFO  io.javalin.Javalin - Javalin started in 536ms \o/
 13 03 2022 - 14:17:24.489 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - PUTrequest received for/clients/12/accounts/69
+13 03 2022 - 14:50:44.601 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 14:50:44.615 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @593ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 14:50:44.620 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 14:50:44.647 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 14:50:45.113 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 14:50:45.114 [main] INFO  io.javalin.Javalin - Javalin started in 499ms \o/
+13 03 2022 - 14:51:22.147 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 14:51:22.160 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @537ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 14:51:22.165 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 14:51:22.191 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 14:51:22.651 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 14:51:22.651 [main] INFO  io.javalin.Javalin - Javalin started in 490ms \o/
+13 03 2022 - 14:51:54.124 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - DELETErequest received for/clients/13/accounts/42
+13 03 2022 - 14:53:04.002 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - DELETErequest received for/clients/13/accounts/420
+13 03 2022 - 14:53:04.073 [JettyServerThreadPool-17] WARN  c.r.controller.ExceptionController - User attempted to retrieve a student that was not found. Exception message is Client with id 420 was not found
+13 03 2022 - 14:58:54.144 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+13 03 2022 - 14:58:54.158 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @558ms to org.eclipse.jetty.util.log.Slf4jLog
+13 03 2022 - 14:58:54.164 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+13 03 2022 - 14:58:54.194 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+13 03 2022 - 14:58:54.665 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+13 03 2022 - 14:58:54.665 [main] INFO  io.javalin.Javalin - Javalin started in 507ms \o/
+13 03 2022 - 14:59:00.252 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - DELETErequest received for/clients/1300/accounts/420
+13 03 2022 - 14:59:00.753 [JettyServerThreadPool-18] WARN  c.r.controller.ExceptionController - User attempted to retrieve a student that was not found. Exception message is Account with id 420 was not found or client wit id 
+13 03 2022 - 14:59:06.300 [JettyServerThreadPool-11] INFO  com.revature.main.Driver - DELETErequest received for/clients/1300/accounts/42
+13 03 2022 - 14:59:06.350 [JettyServerThreadPool-11] WARN  c.r.controller.ExceptionController - User attempted to retrieve a student that was not found. Exception message is Account with id 42 was not found or client wit id 
+13 03 2022 - 14:59:21.687 [JettyServerThreadPool-17] INFO  com.revature.main.Driver - DELETErequest received for/clients/13/accounts/42
+13 03 2022 - 14:59:21.743 [JettyServerThreadPool-17] WARN  c.r.controller.ExceptionController - User attempted to retrieve a student that was not found. Exception message is Account with id 42 was not found or client wit id 

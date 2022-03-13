@@ -44,6 +44,14 @@ public class ClientAccountController implements Controller {
        ctx.status(200);
         ctx.json(editedClientAccount);
     };
+
+    private Handler deleteClientAccountById = (ctx) -> {
+        String id = ctx.pathParam("accountIdInParam");
+        boolean client = clientAccountService.deleteAccountOfClient(id);
+
+        ctx.json(client);
+
+    };
 //       System.out.println(clientAccountToAdd);
 //        ClientAccount ca = clientAccountService.addClientAccount(clientAccountToAdd);
 //        ctx.status(201);
@@ -84,8 +92,8 @@ public class ClientAccountController implements Controller {
     public void mapEndpoints(Javalin app) {
         app.get("/clients/{clientIdInParam}/accounts", getAccountByClientId);
         app.post("/clients/{clientIdInParam}/accounts", addClientAccount);
-        app.put("/clients/{clientIdInParam}/accounts/{accountsIdInParam}", editClientAccount);
+        app.put("/clients/{clientIdInParam}/accounts/{accountIdInParam}", editClientAccount);
 //        app.patch("/tests", patchTests);
-//        app.delete("/tests", deleteTests);
+        app.delete("/clients/{clientIdInParam}/accounts/{accountIdInParam}", deleteClientAccountById);
     }
 }
