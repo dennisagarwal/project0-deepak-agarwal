@@ -10,7 +10,7 @@ public class ClientAccount {
     private int age;
     private int acId;
     private String acType;
-    private String acNumber;
+    private int acNumber;
     private int acClientId;
     private int acBalance;
 
@@ -18,7 +18,8 @@ public class ClientAccount {
 
     }
 
-    public ClientAccount(int id, String firstName, String lastName, int age, int acId, String acType, String acNumber, int acClientId, int acBalance) {
+    public ClientAccount(int id, String firstName, String lastName, int age, int acId, String acType, int acNumber,
+                         int acClientId, int acBalance) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -31,11 +32,44 @@ public class ClientAccount {
     }
 
 
-    public ClientAccount(int acClientId, String firstName, String lastName, int age) {
+    public ClientAccount(int acClientId, String firstName, String lastName, int age, int acId, String acType, int acNumber,
+                         int acBalance ) {
         this.acClientId = acClientId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.acId = acId;
+        this.acType = acType;
+        this.acNumber = acNumber;
+        this.acBalance = acBalance;
+    }
+
+
+    public ClientAccount(int generatedId, String firstName, String lastName, int age, String acType, int acNumber,
+                         int acBalance,int acClientId) {
+        this.acClientId = acClientId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.acId = generatedId;
+        this.acType = acType;
+        this.acNumber = acNumber;
+        this.acBalance = acBalance;
+    }
+
+    public ClientAccount(int generatedId, String acType, int acNumber, int acClientId, int acBalance) {
+        this.acClientId = acClientId;
+        this.acType = acType;
+        this.acId = generatedId;
+        this.acNumber = acNumber;
+        this.acBalance = acBalance;
+    }
+
+    public ClientAccount(int generatedId, String acType, int acNumber, int acClientId, int acBalance, int iacClientId) {
+        this.acId = generatedId;
+        this.acNumber = acNumber;
+        this.acClientId = acClientId;
+        this.acBalance = acBalance;
     }
 
 
@@ -87,11 +121,11 @@ public class ClientAccount {
         this.acType = acType;
     }
 
-    public String getAcNumber() {
+    public int getAcNumber() {
         return acNumber;
     }
 
-    public void setAcNumber(String acNumber) {
+    public void setAcNumber(int acNumber) {
         this.acNumber = acNumber;
     }
 

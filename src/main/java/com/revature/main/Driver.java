@@ -25,17 +25,31 @@ public class Driver {
 
         ClientAccountDao clientAccountDao = new ClientAccountDao();
         try {
-            List<ClientAccount> clientAccounts = clientAccountDao.getAllClientAccounts();
+//            List<ClientAccount> clientAccounts = clientAccountDao.getAllClientAccounts();
+//            System.out.println(clientAccountDao.getAccountByClientId(10));
+//            System.out.println(clientAccountDao.getAllClientAccounts());
+//              clientAccountDao.deleteAccountOfClient(100);
+//            System.out.println(clientAccountDao.deleteAccountOfClient(100));
+//            ClientAccount ca = new ClientAccount(50,"saving",1020,13,90000,13);
+//            System.out.println(clientAccountDao.updateClientAccount(ca));
 
+            clientAccountDao.getAccountByClientIdAccountId(13,50);
+            System.out.println(clientAccountDao.getAccountByClientIdAccountId(13,50));
+//            ClientAccount ca = new ClientAccount(0,"saving",8484,11,92340);
+//            System.out.println(clientAccountDao.addClientAccount(ca));
+//            System.out.println(clientAccountDao.getAllClientAccounts());
 //            for(ClientAccount ca : clientAccounts){
 //                System.out.println(ca);
 //            }
 //            System.out.println(clientAccounts);
-            ClientAccount ca1 = clientAccountDao.getAccountByClientId(10);
-            System.out.println("ca1 " + ca1);
+
+//            ClientAccount ca1 = clientAccountDao.getAccountByClientId(10);
+//            System.out.println("ca1 " + ca1);
 
 //            ClientAccount ca2 = clientAccountDao.getAccountByClientId(10);
 //            System.out.println("ca2 " + ca2);
+
+
 
 
         } catch (SQLException e) {
