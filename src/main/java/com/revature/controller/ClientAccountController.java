@@ -29,7 +29,10 @@ public class ClientAccountController implements Controller {
 
     private Handler addClientAccount = (ctx) ->{
        ClientAccount clientAccountToAdd = ctx.bodyAsClass(ClientAccount.class);
-       System.out.println(clientAccountToAdd);
+//       System.out.println(clientAccountToAdd);
+        ClientAccount ca = clientAccountService.addClientAccount(clientAccountToAdd);
+        ctx.status(201);
+        ctx.json(ca);
 
     };
         //        try {
