@@ -57,6 +57,7 @@ public class ClientAccountController implements Controller {
     };
 
     private Handler editClientAccount = (ctx) ->{
+
         ClientAccount clientAccountToEdit = ctx.bodyAsClass(ClientAccount.class);
 
        ClientAccount editedClientAccount= clientAccountService.editClientAccount(ctx.pathParam("clientIdInParam"),
@@ -66,8 +67,9 @@ public class ClientAccountController implements Controller {
     };
 
     private Handler deleteClientAccountById = (ctx) -> {
-        String id = ctx.pathParam("accountIdInParam");
-        boolean clientAccount = clientAccountService.deleteAccountOfClient(id);
+        String id2 = ctx.pathParam("accountIdInParam");
+        String id1 = ctx.pathParam("clientIdInParam");
+        boolean clientAccount = clientAccountService.deleteAccountOfClient(id1,id2);
 
         ctx.json(clientAccount);
 

@@ -1,14 +1,11 @@
 package com.revature.service;
 
 import com.revature.dao.ClientAccountDao;
-import com.revature.dao.ClientDao;
 import com.revature.exception.ClientAccountNotFoundException;
 import com.revature.exception.ClientNotFoundException;
-import com.revature.model.Client;
 import com.revature.model.ClientAccount;
 
 import java.sql.SQLException;
-import java.util.List;
 
 public class ClientAccountService {
 
@@ -44,10 +41,10 @@ public class ClientAccountService {
         return addedClientAccount;
     }
 
-    public ClientAccount editClientAccount(String id , ClientAccount ca) throws SQLException, ClientAccountNotFoundException{
+    public ClientAccount editClientAccount(String id, ClientAccount ca) throws SQLException, ClientAccountNotFoundException{
         try{
             int clientIdInParam = Integer.parseInt(id);
-            if(clientAccountDao.getAccountByClientId(clientIdInParam)==null | clientAccountDao.getAllClientAccounts()==null ){
+            if(clientAccountDao.getAccountByClientId(clientIdInParam)==null  ){
                 throw new ClientAccountNotFoundException("user is trying to edit client account which does not exist " +
                         ca.getAcClientId() + " not found.");
             }
@@ -59,16 +56,18 @@ public class ClientAccountService {
         }
     }
 
-    public boolean deleteAccountOfClient(String id) throws SQLException, ClientNotFoundException {
+    public boolean deleteAccountOfClient(String id1, String id2) throws SQLException, ClientNotFoundException {
         try {
-            int accountIdInParam = Integer.parseInt(id); //this could throw an unchecked exception
+            int clientIdInParam = Integer.parseInt(id1);
+            int accountIdInParam = Integer.parseInt(id2); //this could throw an unchecked exception
             //known as NumberFormatException
             //important to note because any unhandled exceptions will result in a 500 Internal Server Error
             //(which we should try to avoid)
 
             boolean ca = clientAccountDao.deleteAccountOfClient(accountIdInParam); //this could return null
             if (ca == false) {
-                throw new ClientNotFoundException("Account with id " + accountIdInParam + " was not found");
+                throw new ClientNotFoundException("Client Id "+ clientIdInParam
+                        +"or Account with id " + accountIdInParam + " was not found ");
             }
             return true;
 
