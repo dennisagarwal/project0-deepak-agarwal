@@ -35,6 +35,21 @@ public class ClientAccountController implements Controller {
         ctx.json(ca);
 
     };
+
+    private Handler editClientAccount = (ctx) ->{
+        ClientAccount clientAccountToEdit = ctx.bodyAsClass(ClientAccount.class);
+
+       ClientAccount editedClientAccount= clientAccountService.editClientAccount(ctx.pathParam("clientIdInParam"),
+               clientAccountToEdit);
+       ctx.status(200);
+        ctx.json(editedClientAccount);
+    };
+//       System.out.println(clientAccountToAdd);
+//        ClientAccount ca = clientAccountService.addClientAccount(clientAccountToAdd);
+//        ctx.status(201);
+//        ctx.json(ca);
+
+
         //        try {
 
         //as we are handling all the exception from exception controller
@@ -69,7 +84,7 @@ public class ClientAccountController implements Controller {
     public void mapEndpoints(Javalin app) {
         app.get("/clients/{clientIdInParam}/accounts", getAccountByClientId);
         app.post("/clients/{clientIdInParam}/accounts", addClientAccount);
-//        app.put("/tests", putTests);
+        app.put("/clients/{clientIdInParam}/accounts/{accountsIdInParam}", editClientAccount);
 //        app.patch("/tests", patchTests);
 //        app.delete("/tests", deleteTests);
     }
