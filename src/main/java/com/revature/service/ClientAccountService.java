@@ -6,6 +6,7 @@ import com.revature.exception.ClientNotFoundException;
 import com.revature.model.ClientAccount;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class ClientAccountService {
 
@@ -77,9 +78,15 @@ public class ClientAccountService {
 
     }
 
-//    public List<ClientAccount> getAllClientAccounts() throws SQLException {
-//        return this.clientAccountDao.getAllClientAccounts();
-//    }
+    public List<ClientAccount> getAllAccountsByClientId(String id1) throws SQLException, ClientNotFoundException {
+        int clientIdInParam = Integer.parseInt(id1);
+        List<ClientAccount> ca = clientAccountDao.getAllAccountsByClientId(clientIdInParam);
+        if(ca.isEmpty()){
+            throw new ClientNotFoundException("Account with Client with id " + clientIdInParam + " was not found");
+        }
+        return this.clientAccountDao.getAllAccountsByClientId(clientIdInParam);
+
+    }
 
     public ClientAccount getAccountByClientIdAccountId(String id1, String id2) throws SQLException, ClientAccountNotFoundException {
         int clientId = Integer.parseInt(id1);

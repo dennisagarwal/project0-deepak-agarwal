@@ -17,11 +17,12 @@ public class ClientAccountController implements Controller {
         this.clientAccountService = new ClientAccountService();
     }
 
-//    private Handler getAllClientAccounts = (ctx) -> {
-//        List<ClientAccount> clients = clientAccountService.getAllClientAccounts();
-//        //calling the clients
-//        ctx.json(clients);
-//    };
+    private Handler getAllAccountsByClientId = (ctx) -> {
+        String id1 = ctx.pathParam("clientIdInParam");
+        List<ClientAccount> clients = clientAccountService.getAllAccountsByClientId (id1);
+        //calling the clients
+        ctx.json(clients);
+    };
 
     private Handler getAccountByClientIdAccountId = (ctx) -> {
         String id1 = ctx.pathParam("clientId");
@@ -76,12 +77,12 @@ try {
         boolean clientAccount = clientAccountService.deleteAccountOfClient(id1,id2);
 
         ctx.json(clientAccount);
-
     };
 
 
     @Override
     public void mapEndpoints(Javalin app) {
+        app.get("/clients/{clientIdInParam}/allAccounts", getAllAccountsByClientId );
         app.get("/clients/{clientIdInParam}/accounts", getAccountByClientId);
         app.get("/clients/{clientId}/accounts/{accountId}", getAccountByClientIdAccountId);
         app.post("/clients/{clientIdInParam}/accounts", addClientAccount);

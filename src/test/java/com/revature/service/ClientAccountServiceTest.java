@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 
 import static org.junit.jupiter.api.Assertions.fail;
-import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -63,6 +63,21 @@ public class ClientAccountServiceTest {
         //Act + Assert
         Assertions.assertThrows(NumberFormatException.class, () -> {
             clientAccountService.getAccountByClientIdAccountId("abc", "abc");
+        });
+    }
+
+    //Negetive
+    @Test
+    public void test_getAccountByyClientIdAccountId_sqlException() throws SQLException{
+        //Arrange
+        ClientAccountDao mockDao = mock(ClientAccountDao.class);
+        when(mockDao.getAccountByClientIdAccountId(anyInt(),anyInt())).thenThrow(SQLException.class);
+        ClientAccountService clientAccountService = new ClientAccountService(mockDao);
+
+        //Act + Assert
+        Assertions.assertThrows(SQLException.class, () -> {
+            clientAccountService.getAccountByClientIdAccountId("5","8");
+
         });
     }
 }

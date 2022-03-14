@@ -40,12 +40,15 @@ public class ClientAccountDao {
     //GET /clients/{client_id}/accounts: Get all accounts for client with id of X (if client exists)
 //get all clients
 
-    public List<ClientAccount> getAllClientAccounts() throws SQLException {
+    public List<ClientAccount> getAllAccountsByClientId(int id1) throws SQLException {
         List<ClientAccount> clientAccounts = new ArrayList<>();
         try (Connection con = ConnectionUtility.getConnection()) {
-            String query = "SELECT * FROM clients , accounts where clients.id = accounts.client_id;";
+//            String query = "SELECT * FROM clients , accounts where clients.id = accounts.client_id;";
+            String query = "SELECT * FROM clients , accounts where clients.id= ?;";
+
 
             PreparedStatement pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, id1);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
