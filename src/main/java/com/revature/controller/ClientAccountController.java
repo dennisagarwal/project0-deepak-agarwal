@@ -59,11 +59,15 @@ public class ClientAccountController implements Controller {
     private Handler editClientAccount = (ctx) ->{
 
         ClientAccount clientAccountToEdit = ctx.bodyAsClass(ClientAccount.class);
-
-       ClientAccount editedClientAccount= clientAccountService.editClientAccount(ctx.pathParam("clientIdInParam"),
-               clientAccountToEdit);
-       ctx.status(200);
-        ctx.json(editedClientAccount);
+try {
+    ClientAccount editedClientAccount = clientAccountService.editClientAccount(ctx.pathParam("clientIdInParam"),
+            clientAccountToEdit);
+    ctx.status(200);
+    ctx.json(editedClientAccount);
+}catch(ClientAccountNotFoundException e){
+    ctx.status(404);
+    ctx.json(e.getMessage());
+        }
     };
 
     private Handler deleteClientAccountById = (ctx) -> {

@@ -45,8 +45,7 @@ public class ClientAccountService {
         try{
             int clientIdInParam = Integer.parseInt(id);
             if(clientAccountDao.getAccountByClientId(clientIdInParam)==null  ){
-                throw new ClientAccountNotFoundException("user is trying to edit client account which does not exist " +
-                        ca.getAcClientId() + " not found.");
+                throw new ClientAccountNotFoundException("user is trying to edit client or account which does not exist");
             }
             ca.setId(clientIdInParam);
             ClientAccount editedClientAccount = clientAccountDao.updateClientAccount(ca);
@@ -91,5 +90,9 @@ public class ClientAccountService {
             throw new ClientAccountNotFoundException("Client Id " + clientId + " or Account Id " + accountId + " not found ");
         }
        return ca;
+    }
+
+    public ClientAccountService(ClientAccountDao mockDao){
+        this.clientAccountDao = mockDao;
     }
 }
