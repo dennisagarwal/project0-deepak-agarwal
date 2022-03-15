@@ -4,13 +4,15 @@ import com.revature.dao.ClientAccountDao;
 import com.revature.exception.ClientAccountNotFoundException;
 import com.revature.exception.ClientNotFoundException;
 import com.revature.model.ClientAccount;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class ClientAccountService {
 
-
+    private static Logger logger = LoggerFactory.getLogger(ClientAccountService.class);
 
     private ClientAccountDao clientAccountDao;
 

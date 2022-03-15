@@ -80,6 +80,33 @@ public class ClientAccountServiceTest {
 
         });
     }
+
+    @Test
+    public void test_deleteAccountOfClient_sqlException() throws SQLException{
+        //Arrange
+        ClientAccountDao mockDao = mock(ClientAccountDao.class);
+        when(mockDao.deleteAccountOfClient(anyInt())).thenThrow(SQLException.class);
+        ClientAccountService clientAccountService = new ClientAccountService(mockDao);
+
+        //Act + Assert
+        Assertions.assertThrows(SQLException.class, () -> {
+            clientAccountService.deleteAccountOfClient("13","60");
+        });
+    }
+//
+//    @Test
+//    public void test_editAccountOfClient_sqlException() throws SQLException,ClientAccountNotFoundException{
+//        //Arrange
+//        ClientAccountDao mockDao = mock(ClientAccountDao.class);
+//        when(mockDao.updateClientAccount(new ClientAccount())).thenThrow(ClientAccountNotFoundException.class);
+//
+//        ClientAccountService clientAccountService = new ClientAccountService(mockDao);
+//
+//        //Act + Assert
+//        Assertions.assertThrows(SQLException.class, () -> {
+//            clientAccountService.editClientAccount("10", new ClientAccount());
+//        });
+//    }
 }
 
 

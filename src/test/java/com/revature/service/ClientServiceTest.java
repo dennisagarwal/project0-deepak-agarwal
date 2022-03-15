@@ -115,4 +115,6 @@ public class ClientServiceTest {
            clientService.getClientById("5");
         });
     }
+
+
 }
