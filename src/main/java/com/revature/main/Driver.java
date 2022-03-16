@@ -18,10 +18,13 @@ public class Driver {
 
     public static Logger logger = LoggerFactory.getLogger(Driver.class);
     public static void main(String[] args) {
-//        ClientAccountDao clientAccountDao = new ClientAccountDao();
+        ClientAccountDao clientAccountDao = new ClientAccountDao();
 //        try {
-//            List<ClientAccount> clientAccounts = clientAccountDao.getAllClientAccounts();
-//            System.out.println(clientAccountDao.getAccountByClientId(10));
+//            List<ClientAccount> clientAccounts = clientAccountDao.getAccountsByClientIdBalance(10,200,10000);
+//            System.out.println(clientAccountDao.getAccountsByClientIdBalance(13,200000,100));
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 //            System.out.println(clientAccountDao.getAllClientAccounts());
 //              clientAccountDao.deleteAccountOfClient(100);
 //            System.out.println(clientAccountDao.deleteAccountOfClient(100));

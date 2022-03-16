@@ -17,11 +17,25 @@ public class ClientAccountController implements Controller {
         this.clientAccountService = new ClientAccountService();
     }
 
-    private Handler getAllAccountsByClientId = (ctx) -> {
+//    private Handler getAllAccountsByClientId = (ctx) -> {
+//        String id1 = ctx.pathParam("clientIdInParam");
+//        List<ClientAccount> clients = clientAccountService.getAllAccountsByClientId (id1);
+//        //calling the clients
+//        ctx.json(clients);
+//    };
+
+    private Handler getAccountsByClientIdBalance = (ctx) -> {
         String id1 = ctx.pathParam("clientIdInParam");
-        List<ClientAccount> clients = clientAccountService.getAllAccountsByClientId (id1);
-        //calling the clients
-        ctx.json(clients);
+        String bl = ctx.queryParam("lowerBalance");
+        String bh = ctx.queryParam("higherBalance");
+        if(bl != null & bh != null) {
+            List<ClientAccount> clientAccount = clientAccountService.getAccountsByClientIdBalance(id1, bl, bh);
+            //calling the clients
+            ctx.json(clientAccount);
+        } else {
+            List<ClientAccount> clientAccount =  clientAccountService.getAllAccountsByClientId (id1);
+            ctx.json(clientAccount);
+        }
     };
 
     private Handler getAccountByClientIdAccountId = (ctx) -> {
@@ -82,9 +96,10 @@ try {
 
     @Override
     public void mapEndpoints(Javalin app) {
-        app.get("/clients/{clientIdInParam}/allAccounts", getAllAccountsByClientId );
+        app.get("/clients/{clientIdInParam}/allAccounts",  getAccountsByClientIdBalance );
         app.get("/clients/{clientIdInParam}/accounts", getAccountByClientId);
         app.get("/clients/{clientId}/accounts/{accountId}", getAccountByClientIdAccountId);
+//        app.get("/clients/{clientIdInParam}/accounts?amountLessThan={lowerBalance}&amountGreaterThan={higherBalance}", getAccountsByClientIdBalance);
         app.post("/clients/{clientIdInParam}/accounts", addClientAccount);
         app.put("/clients/{clientIdInParam}/accounts/{accountIdInParam}", editClientAccount);
         app.delete("/clients/{clientIdInParam}/accounts/{accountIdInParam}", deleteClientAccountById);

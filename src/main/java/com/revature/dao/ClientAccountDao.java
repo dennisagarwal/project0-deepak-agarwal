@@ -99,6 +99,39 @@ public class ClientAccountDao {
         }
         return null;
     }
+    //GET /clients/{client_id}/accounts?amountLessThan=2000&amountGreaterThan=400: Get all accounts for client id of X
+    //with balances between 400 and 2000 (if client exists)
+    public List<ClientAccount> getAccountsByClientIdBalance(int id1, int bl, int bh) throws SQLException {
+        List<ClientAccount> clientAccounts = new ArrayList<>();
+        try (Connection con = ConnectionUtility.getConnection()) {
+            String query = "SELECT * FROM clients , accounts where clients.id= ? AND accounts.balance<? AND " +
+                    "accounts.balance>?;";
+
+
+            PreparedStatement pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, id1);
+            pstmt.setInt(2, bl);
+            pstmt.setInt(3, bh);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String firstName = rs.getString("first_name");
+                String lastName = rs.getString("last_name");
+                int age = rs.getInt("age");
+
+                int acId = rs.getInt("account_id");
+                String acType = rs.getString("account_type");
+                int acNumber = rs.getInt("account_number");
+                int acClientId = rs.getInt("client_id");
+                int acBalance = rs.getInt("balance");
+
+                ClientAccount clientAccount = new ClientAccount(id, firstName, lastName, age, acId, acType, acNumber, acClientId, acBalance);
+                clientAccounts.add(clientAccount);
+            }
+
+        }
+        return clientAccounts;
+    }
 
 
 

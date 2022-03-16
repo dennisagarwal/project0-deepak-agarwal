@@ -33,6 +33,19 @@ public class ClientAccountService {
         return ca;
     }
 
+    public List<ClientAccount> getAccountsByClientIdBalance(String id1, String bl,String bh) throws SQLException, ClientNotFoundException {
+        int clientIdInParam = Integer.parseInt(id1);
+        int lowerBalance = Integer.parseInt(bl);
+        int higherBalance = Integer.parseInt(bh);
+        List<ClientAccount> ca = clientAccountDao.getAccountsByClientIdBalance(clientIdInParam,lowerBalance,higherBalance);
+        if(ca.isEmpty()){
+            throw new ClientNotFoundException("Account with Client with id " + clientIdInParam + " was not found with " +
+                    "the given balance range");
+        }
+        return ca;
+//        return this.clientAccountDao.getAccountsByClientIdBalance(clientIdInParam,lowerBalance,higherBalance);
+    }
+
     public ClientAccount addClientAccount(ClientAccount ca) throws SQLException {
 
         if((!ca.getAcType().matches("[a-zA-Z]+")) | ca.getAcNumber()==0 | ca.getAcClientId()==0 | ca.getAcBalance()<0){
