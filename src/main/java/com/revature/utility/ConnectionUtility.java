@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//TODO 2: Create a ConnectionUtility class will contain the getConnection method where our code
+//TODO 2: Create a ConnectionUtility class will contain the getConnection method where our code will belong
 public class ConnectionUtility {
 
     public static Connection getConnection() throws SQLException {
