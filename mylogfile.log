@@ -8577,3 +8577,20 @@ org.postgresql.util.PSQLException: ERROR: syntax error at or near "ANDaccounts"
 16 03 2022 - 12:38:01.184 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - PUTrequest received for/clients/13/accounts/38
 16 03 2022 - 12:38:21.711 [JettyServerThreadPool-14] INFO  com.revature.main.Driver - POSTrequest received for/clients/13/accounts
 16 03 2022 - 12:38:38.234 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - DELETErequest received for/clients/13/accounts/71
+17 03 2022 - 07:13:40.747 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+17 03 2022 - 07:13:40.805 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1720ms to org.eclipse.jetty.util.log.Slf4jLog
+17 03 2022 - 07:13:40.811 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+17 03 2022 - 07:13:41.110 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+17 03 2022 - 07:13:41.786 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+17 03 2022 - 07:13:41.786 [main] INFO  io.javalin.Javalin - Javalin started in 981ms \o/
+17 03 2022 - 07:17:46.345 [JettyServerThreadPool-18] INFO  com.revature.main.Driver - GETrequest received for/clients/11/allAccounts
+17 03 2022 - 07:17:52.572 [JettyServerThreadPool-11] INFO  com.revature.main.Driver - GETrequest received for/clients/13/accounts/71
+17 03 2022 - 07:18:00.765 [JettyServerThreadPool-14] INFO  com.revature.main.Driver - GETrequest received for/clients

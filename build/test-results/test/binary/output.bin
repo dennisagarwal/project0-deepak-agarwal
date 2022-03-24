@@ -1,1 +1,1 @@
-­[Client{id=1, firstName='Bill', lastName='Doe', age=28}, Client{id=2, firstName='John', lastName='Moe', age=32}, Client{id=3, firstName='Carol', lastName='Smith', age=26}]
+‡ClientAccount{id=0, firstName='null', lastName='null', age=0, acId=0, acType='null', acNumber='1010', acClientId=10, acBalance=90000}
